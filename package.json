@@ -1,0 +1,15 @@
+{
+  "name": "mefirst",
+  "version": "0.1.0",
+  "description": "Calculates effective speed of Pokemon in VGC/Smogon-style competitive play and requirements to outspeed them",
+  "bin": "index.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --test"
+  },
+  "author": "Brett McLean <brettrmclean@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "csv-parser": "^3.0.0"
+  }
+}

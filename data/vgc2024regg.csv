@@ -1,0 +1,56 @@
+POKEMON_NAME,BASE_SPEED,CALC_MIN_SPEED,CALC_MID_SPEED,CALC_HIGH_SPEED,CALC_FULL_SPEED,CALC_FULL_SPEED_1_5x_BOOST,CALC_FULL_SPEED_2x_BOOST,CALC_CUSTOM
+Regieleki,200,,,1,1,,,EV68+
+Calyrex-Shadow,150,,,1,1,1,,EV148+
+Zacian-Crowned,148,,,,1,,,EV156;EV156+;EV164;EV164+
+Iron Bundle,136,,,1,1,1,,
+Koraidon,135,,,1,1,,,EV204;EV196
+Miraidon,135,,,1,1,,,EV196
+Chien-Pao,135,,,1,1,,,
+Flutter Mane,135,,,1,1,,,EV4+;EV124+;EV68+
+Zamazenta-Crowned,128,,1,1,,,,EV244
+Whimsicott,116,,1,,1,,,EV220+
+Tornadus-Incarnate,111,,,,1,,,EV4
+Ogerpon-Hearthflame,110,,,,1,,,EV188+;EV188
+Ogerpon-Wellspring,110,,,,1,,,EV188;EV188+;EV4
+Ogerpon-Cornerstone,110,,,1,1,,,EV188+
+Walking Wake,109,,,1,1,,,
+Mienshao,105,,,1,1,,,
+Landorus-Incarnate,101,,,1,1,,,
+Comfey,100,,1,,,,,EV4
+Chi-Yu,100,,,1,1,1,,EV156+;EV156+/BST1.5x;EV236;EV236/BST1.5x
+Volcarona,100,,,,,,,EV4;EV44;EV100;EV236
+Entei,100,,,1,,,,EV20
+Lunala,97,,1,,,,,EV4;EV12;EV92
+Urshifu-Rapid-Strike,97,,,,1,1,,EV212/BST1.5x;EV252/BST1.5x 
+Urshifu-Single-Strike,97,,,1,1,,,
+Landorus-Therian,91,,,1,1,1,,EV228+
+Annihilape,90,,1,,1,1,,EV20;EV124
+Moltres-Galar,90,,1,,,,,EV20;EV76;EV124
+Kyogre,90,,,1,1,1,,EV20
+Groudon,90,,1,,,,,EV20;EV60
+Archaludon,85,,1,,,,,EV52;EV60
+Rillaboom,85,,1,,,,,EV12;EV60
+Kingdra,85,,,1,,,1,EV220
+Indeedee-F,85,1,1,,,,,
+Gholdengo,84,,,,1,,,EV60;EV124
+Tatsugiri,82,,,1,1,1,,EV20;EV20/BST1.5x
+Dragonite,80,,1,,,,,EV116;EV20;EV44
+Raging Bolt,75,,1,1,,,,EV12;EV156
+Smeargle,75,1,,,1,,,
+Tsareena,72,,,1,,,,EV220;EV172
+Sinistcha,70,1,1,,,,,
+Wo-Chien,70,,1,,,,,
+Pelipper,65,,1,1,1,,,
+Grimmsnarl,60,,1,,,,,EV12
+Terapagos,60,,1,1,,,,EV164;EV148;EV116
+Farigiraf,60,1,1,,,,,EV4
+Incineroar,60,,1,,,,,EV36;EV28
+Ursaluna-Bloodmoon,52,1,1,,,,,
+Ursaluna-Base,50,1,1,,1,,,
+Iron Hands,50,1,1,,,,,EV92
+Kingambit,50,1,1,,,,,EV12
+Calyrex-Ice,50,1,1,,1,,,EV4
+Ting-Lu,45,1,1,,,,,EV12
+Dondozo,35,,,,1,,1,EV4;EV116;EV156;EV172;EV4/BST2x;EV116/BST2x;EV156/BST2x;EV172/BST2x
+Amoonguss,30,1,1,,,,,EV12
+Torkoal,20,1,1,,,,,
