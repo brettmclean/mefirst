@@ -6,8 +6,9 @@ class SpeedCalculator {
 	#results;
 	
 	constructor(options) {
-		this.#pokemonLevel = 50;
-		this.#condenseOutput = !!options ? options.condenseOutput : false;
+		options = options || {};
+		this.#pokemonLevel = options.pokemonLevel || 50;
+		this.#condenseOutput = options.condenseOutput || false;
 	}
 	
 	getResults(speedTestSets) {

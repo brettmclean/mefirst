@@ -17,6 +17,10 @@ class OptionsParser {
                 type: "string",
                 short: "c"
             },
+            "level": {
+                type: "string",
+                short: "l"
+            },
             "by-speed": {
                 type: "boolean",
                 short: "s"
@@ -35,8 +39,6 @@ class OptionsParser {
 			}
         };
     }
-
-    convertToConfigObject
 }
 
 class Config {
@@ -48,6 +50,7 @@ class Config {
 
     constructor(argValues) {
         this.csvFilePath = argValues.csv;
+        this.pokemonLevel = typeof argValues.level !== "undefined" ? parseInt(argValues.level) : 50;
         this.sortBySpeed = argValues["by-speed"] || false;
         this.sortByPokemonName = argValues["by-name"] || false;
         this.condenseOutput = argValues.condense || false;
@@ -59,6 +62,10 @@ class Config {
     #validate() {
         if(!this.sortBySpeed && !this.sortByPokemonName) {
             this.sortBySpeed = true;
+        }
+
+        if(this.pokemonLevel < 1 || this.pokemonLevel > 100) {
+            throw new ConfigError("Level provided via -l switch must be between 1 and 100");
         }
 
         if(this.sortBySpeed && this.sortByPokemonName) {

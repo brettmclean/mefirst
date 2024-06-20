@@ -16,6 +16,18 @@ describe("Options parser", () => {
         assert.strictEqual(options.csvFilePath, "path/to/my/other/file.csv");
     });
 
+    it("supports a --level argument for specifying the level of Pokemon in battle", () => {
+        const op = new OptionsParser();
+        const options = op.parse(["--csv", "file.csv", "--level", "76"]);
+        assert.strictEqual(options.pokemonLevel, 76);
+    });
+
+    it("supports an -l argument for specifying the level of Pokemon in battle", () => {
+        const op = new OptionsParser();
+        const options = op.parse(["--csv", "file.csv", "-l", "76"]);
+        assert.strictEqual(options.pokemonLevel, 76);
+    });
+
     it("supports a --by-speed argument for specifying to sort output by speed", () => {
         const op = new OptionsParser();
         const options = op.parse(["--csv", "file.csv", "--by-speed"]);
@@ -64,6 +76,12 @@ describe("Options parser", () => {
         assert.strictEqual(options.displayHelp, true);
     });
 
+    it("assumes Pokemon level is 50 when no level is provided", () => {
+        const op = new OptionsParser();
+        const options = op.parse(["--csv", "file.csv"]);
+        assert.strictEqual(options.pokemonLevel, 50);
+    });
+
     it("sorts output by speed when no sort option is provided", () => {
         const op = new OptionsParser();
         const options = op.parse(["--csv", "file.csv", ]);
@@ -107,6 +125,16 @@ describe("Options parser", () => {
     it("throws an error if CSV file path is not provided to --csv switch", () => {
         const op = new OptionsParser();
         assert.throws(() => op.parse(["--csv"]));
+    });
+
+    it("throws an error if provided level is below 1", () => {
+        const op = new OptionsParser();
+        assert.throws(() => op.parse(["--csv", "file.csv", "--level", "0"]));
+    });
+
+    it("throws an error if provided level is above 100", () => {
+        const op = new OptionsParser();
+        assert.throws(() => op.parse(["--csv", "file.csv", "--level", "101"]));
     });
 
     it("throws an error if both sort by speed and sort by Pokemon name are specified", () => {

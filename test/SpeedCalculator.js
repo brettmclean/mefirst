@@ -152,6 +152,17 @@ describe("Speed calculator", () => {
 				natureEffect: 1
 			}, 92); // Landorus actual speed is 137
 		});
+
+		it("should calculate correct speed when provided custom Pokemon level in options", () => {
+			const expectedCalculatedSpeed = 225;
+			let sc = new SpeedCalculator({ pokemonLevel: 79 });
+
+			const psts = getPokemonSpeedTestSetWithASingleFullSpeedTest({ pokemonName: "Altaria", baseSpeed: 80 });
+			let psrs = sc.getResults(psts);
+			let actualCalculatedSpeed = psrs[0].actualSpeed;
+
+			assert.strictEqual(actualCalculatedSpeed, expectedCalculatedSpeed);
+		});
 });
 
 function getPokemonSpeedTestSetWithASingleTest(params) {
